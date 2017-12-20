@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <ul>
+        <li><router-link to="/vueRoter">/vueRouter</router-link></li>
+      </ul>
     <router-view/>
   </div>
 </template>
