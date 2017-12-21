@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import vueRouter from '@/components/vueRouter'
+import Transition from '@/components/transition'
 Vue.use(Router)
 
  const nRouter = new Router({
@@ -50,9 +51,16 @@ Vue.use(Router)
     { path: '/asterisk/*' },
     // make part of th path optional by wrapping with parens and add "?"
     // 使用？使父路径的一部分变为可选的
-    { path: '/optional-group/(foo/)?bar' }
+    { path: '/optional-group/(foo/)?bar' },
+    {path:'/transition',component:Transition,
+      children:[
+      {path:'/transition/first',component:resolve=>require(['../components/chidlren/first.vue'], resolve)},
+      {path:'/transition/second',component:resolve=>require(['../components/chidlren/second.vue'], resolve)},
+      {path:'/transition/third',component:resolve=>require(['../components/chidlren/third.vue'], resolve)}
+    ]}
   ]
 })
+
 // 全局前置守卫
 nRouter.beforeEach((to, from, next) => {
   // ...

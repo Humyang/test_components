@@ -29,6 +29,8 @@
       <!-- <pre>{{ JSON.stringify($route, null, 2) }}</pre> -->
       <h1>元信息</h1>
       <p @click="$router.push('meta')">meta</p>
+      <h1>Transition</h1>
+      <p @click="$router.push('transition')">meta</p>
   </div>
 </template>
 
