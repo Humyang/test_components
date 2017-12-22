@@ -57,7 +57,13 @@ Vue.use(Router)
       {path:'/transition/first',component:resolve=>require(['../components/chidlren/first.vue'], resolve)},
       {path:'/transition/second',component:resolve=>require(['../components/chidlren/second.vue'], resolve)},
       {path:'/transition/third',component:resolve=>require(['../components/chidlren/third.vue'], resolve)}
-    ]}
+    ]},
+    {path:'/dataGet',component:resolve=>require(['../components/dataGet.vue'], resolve),
+        children:[
+        {path:'/dataGet/after',component:resolve=>require(['../components/dataGet/after.vue'], resolve)},
+        {path:'/dataGet/before',component:resolve=>require(['../components/dataGet/before'], resolve)}
+      ]
+    }
   ]
 })
 
