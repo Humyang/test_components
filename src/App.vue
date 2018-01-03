@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <ul>
-        <li><router-link to="/vueRoter">/vueRouter</router-link></li>
+        <li><router-link to="/vueRouter">/vueRouter</router-link></li>
       </ul>
     <router-view/>
   </div>
